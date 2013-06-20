@@ -1,0 +1,130 @@
+dhcp125-231:~ JonnyBoy$ ssh jnguy@lnxsrv01.seas.ucla.edu
+The authenticity of host 'lnxsrv01.seas.ucla.edu (164.67.100.231)' can't be established.
+RSA key fingerprint is e3:e4:48:85:c2:81:53:ea:b6:d7:a0:cb:bd:f3:80:f5.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'lnxsrv01.seas.ucla.edu,164.67.100.231' (RSA) to the list of known hosts.
+jnguy@lnxsrv01.seas.ucla.edu's password: 
+Permission denied, please try again.
+jnguy@lnxsrv01.seas.ucla.edu's password: 
+Permission denied, please try again.
+jnguy@lnxsrv01.seas.ucla.edu's password: 
+
+dhcp125-231:~ JonnyBoy$ ssh nguy@lnxsrv01.seas.ucla.edu
+nguy@lnxsrv01.seas.ucla.edu's password: 
+*****************************************************************************
+                 lnxsrv01.seas.ucla.edu RHEL 5
+*****************************************************************************
+
+    * Please use "lnxsrv.seas.ucla.edu" to login for load balancing
+    * User processes older than 36 hours will be cleaned up
+    * You can run graphical applications from your PC using SSH and Xming
+    !! Please see http://www.seasnet.ucla.edu/UnixServers/lnxsrv !!
+
+*****************************************************************************
+* ========================================================================= *
+* SEASnet Computing Access						    *	
+* ------------------------------------------------------------------------- *
+* Priority is given both on the servers and in the student labs to those    *
+* students doing coursework.  Computing support for research is provided by *
+*****************************************************************************
+* For assistance please contact help@seas.ucla.edu or call 206-6864.        *
+*****************************************************************************
+ 
+This file is /etc/motd. If you missed part of it, type 'more /etc/motd'.
+Last updated:  Fri Sep 17 11:29:36 PDT 2010
+[nguy@lnxsrv01 ~]$ mkdir cs33
+[nguy@lnxsrv01 ~]$ cd cs33 wget http://www.cs.ucla.edu/~ani/classes/cs33.10f/project1/datalab-handout.tar
+cd: Too many arguments.
+[nguy@lnxsrv01 ~]$ cd cs33 wget http://www.cs.ucla.edu/~ani/classes/cs33.10f/project1/datalab-handout.tar
+cd: Too many arguments.
+[nguy@lnxsrv01 ~]$ cd cs33
+[nguy@lnxsrv01 ~/cs33]$ wget http://www.cs.ucla.edu/~ani/classes/cs33.10f/project1/datalab-handout.tar
+--2010-10-06 12:14:46--  http://www.cs.ucla.edu/~ani/classes/cs33.10f/project1/datalab-handout.tar
+Resolving www.cs.ucla.edu... 131.179.128.22
+Connecting to www.cs.ucla.edu|131.179.128.22|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 836608 (817K) [application/x-tar]
+Saving to: `datalab-handout.tar'
+
+100%[==============================================>] 836,608     --.-K/s   in 0.02s   
+
+2010-10-06 12:14:46 (37.7 MB/s) - `datalab-handout.tar' saved [836608/836608]
+
+[nguy@lnxsrv01 ~/cs33]$ tar xvf datalab-handout.tar
+Makefile
+README
+bits.c
+bits.h
+btest.c
+btest.h
+datalab.pdf
+datalab.ps
+decl.c
+dlc
+tests.c
+[nguy@lnxsrv01 ~/cs33]$ make 
+gcc -O -Wall -o btest bits.c btest.c decl.c tests.c
+[nguy@lnxsrv01 ~/cs33]$ ls
+bits.c  btest    btest.h              datalab.pdf  decl.c  Makefile  tests.c
+bits.h  btest.c  datalab-handout.tar  datalab.ps   dlc     README
+[nguy@lnxsrv01 ~/cs33]$ btest -help
+btest: Command not found.
+[nguy@lnxsrv01 ~/cs33]$ emax
+emax: Command not found.
+[nguy@lnxsrv01 ~/cs33]$ emaxc@s 
+emaxc@s: Command not found.
+[nguy@lnxsrv01 ~/cs33]$ emax bits.c@s
+emax: Command not found.
+[nguy@lnxsrv01 ~/cs33]$ emacs bits.c
+[nguy@lnxsrv01 ~/cs33]$ emacs bits.c
+
+File Edit Options Buffers Tools C Help                                                  
+ *   2. Use the btest test harness to check that your solutions produce
+ *      the correct answers. Watch out for corner cases around Tmin and Tmax.
+ */
+/*
+ * bitAnd - x&y using only ~ and |
+ *   Example: bitAnd(6, 5) = 4
+ *   Legal ops: ~ |
+ *   Max ops: 8
+ *   Rating: 1
+ */
+int bitAnd(int x, int y) {
+  return 2;
+}
+
+
+/*
+ * bitMask - Generate a mask consisting of all 1's
+ *   lowbit and highbit
+ *   Examples: bitMask(5,3) = 0x38
+ *   Assume 0 <= lowbit <= 31, and 0 <= highbit <= 31
+ *   If lowbit > highbit, then mask should be all 0's
+ *   Legal ops: ! ~ & ^ | + << >>
+ *   Max ops: 16
+ *   Rating: 3
+ */
+int bitMask(int highbit, int lowbit) {
+
+
+
+
+
+  return 2;
+
+}
+/*
+ * bitParity - returns 1 if x contains an odd number of 0's
+ *   Examples: bitParity(5) = 0, bitParity(7) = 1
+ *   Legal ops: ! ~ & ^ | + << >>
+ *   Max ops: 20
+ *   Rating: 4
+ */
+int bitParity(int x) {
+  return 2;
+}
+/*
+ * bitXor - x^y using only ~ and &
+ *   Example: bitXor(4, 5) = 1
+-uu-:---F1  bits.c            (C Abbrev)--L150--52%-------------------------------------
+

@@ -1,0 +1,146 @@
+Last login: Thu Dec  2 21:13:02 on ttys000
+s3212-234:~ jonnyboy$ ssh nguy@lnxsrv01.seas.ucla.edu
+nguy@lnxsrv01.seas.ucla.edu's password: 
+Last login: Thu Dec  2 21:13:15 2010 from s3212-234.resnet.ucla.edu
+*****************************************************************************
+                 lnxsrv01.seas.ucla.edu RHEL 5
+*****************************************************************************
+
+    * Please use "lnxsrv.seas.ucla.edu" to login for load balancing
+    * User processes older than 36 hours will be cleaned up
+    * You can run graphical applications from your PC using SSH and Xming
+    !! Please see http://www.seasnet.ucla.edu/UnixServers/lnxsrv !!
+
+*****************************************************************************
+* ========================================================================= *
+* SEASnet Computing Access						    *	
+* ------------------------------------------------------------------------- *
+* Priority is given both on the servers and in the student labs to those    *
+* students doing coursework.  Computing support for research is provided by *
+*****************************************************************************
+* For assistance please contact help@seas.ucla.edu or call 206-6864.        *
+*****************************************************************************
+ 
+This file is /etc/motd. If you missed part of it, type 'more /etc/motd'.
+Last updated:  Fri Sep 17 11:29:36 PDT 2010
+[nguy@lnxsrv01 ~]$ ls
+AGREEMENT  Application Data  bits.c  cs33  Desktop  My Documents  nsdefault  WINDOWS
+[nguy@lnxsrv01 ~]$ cd cs33/buflab
+[nguy@lnxsrv01 buflab]$ ls
+assem.txt                core.16614  core.19683  core.686          #exploit.txt#  gdbn.cmd              #sendstring#  test.s
+bufbomb                  core.16745  core.23682  core.6899         exploit.txt    gdbn.cmd~             #test.d#      test.s~
+buflabNguy_Jonathan.tar  core.17660  core.26713  core.8934         exploit.txt~   Nguy_Jonathan_cookie  test.d
+core.13658               core.17760  core.27734  exploit-raw.txt   gdb.cmd        real.txt              test.d~
+core.15694               core.17788  core.29985  exploit-raw.txt~  gdb.cmd~       sendstring            test.o
+[nguy@lnxsrv01 buflab]$ rm core.*
+[nguy@lnxsrv01 buflab]$ ls
+assem.txt                exploit-raw.txt   exploit.txt   gdb.cmd~   Nguy_Jonathan_cookie  #sendstring#  test.d~  test.s~
+bufbomb                  exploit-raw.txt~  exploit.txt~  gdbn.cmd   real.txt              #test.d#      test.o
+buflabNguy_Jonathan.tar  #exploit.txt#     gdb.cmd       gdbn.cmd~  sendstring            test.d        test.s
+[nguy@lnxsrv01 buflab]$ emacs gdb.cmd
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs exploit.txt
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ ls
+assem.txt                exploit-raw.txt   exploit.txt   gdb.cmd~   Nguy_Jonathan_cookie  #sendstring#  test.d~  test.s~
+bufbomb                  exploit-raw.txt~  exploit.txt~  gdbn.cmd   real.txt              #test.d#      test.o
+buflabNguy_Jonathan.tar  #exploit.txt#     gdb.cmd       gdbn.cmd~  sendstring            test.d        test.s
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+│edx            0x0      0                                       ebp            0x4abfc0 4898752 0x555870b4                      │
+│esi            0x0      0             6774                      edi            0x2e     46            67e0                      │
+│edx            0x603ff4 6307828                                 eflags         0x1fa0   8096    IF ]                            │
+│cs             0x49e970acx49e920 <_dl_70acg_state>              eflags         0x246 70b4 PF ZF IF ]  70b4                      │
+│ds             0xf08    3848                                    es             0x2b     43                                      │
+│fs             0x8048e7a        0x8048e7a <smoke+42>            gs             0x63     99                                      │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+   ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+   │0x8048e50 <smoke>       push   %ebp                                                                                          │
+B+>│0x49e920 <_dl_debug_state>      push   %ebp                                                                                  │
+   │0x49e921 <_dl_debug_state+1>    mov    %esp,%ebplt>                                                                          │
+   │0x8048e50 <smoke>       push   %ebp                                                                                          │
+   │0x8048e51 <smoke+1>     mov    %esp,%ebp        %edi                                                                         │
+   │0x8048e53 <smoke+3>     sub    $0x8,%esp                                                                                     │
+   │0x8048e56 <smoke+6>     movl   $0x0,(%esp)                                                                                   │
+   │0x8048e5d <smoke+13>    call   0x80489e0 <entry_check>                                                                       │
+   │0x8048e62 <smoke+18>    movl   $0x8049b2c,(%esp)                                                                             │
+   │0x8048e69 <smoke+25>    call   0x8048850 <puts@plt>                                                                          │
+   │0x8048e6e <smoke+30>    movl   $0x0,(%esp)                                                                                   │
+   │0x8048e75 <smoke+37>    call   0x8048b20 <validate>                                                                          │
+  >│0x8048e7a <smoke+42>    movl   $0x0,(%esp)                                                                                   │
+   │0x8048e81 <smoke+49>    call   0x80488a0 <exit@plt>                                                                          │
+   │0x8048e86               lea    0x0(%esi),%esi                                                                                │
+   └──8048e89               lea    0x0(%edi,%eiz,1),%edi─────────────────────────────────────────────────────────────────────────┘
+   │0x8048e90 <Gets>me_matchpush   %ebsh   %ebp                                                                                  │
+   │0x8048e91 <Gets+1>_matchmov    %esp,%ebpesp,%ebp                                                                             │
+   │0x8048e93 <Gets+3>      push   %edi                                                                                          │
+   │0x8048e94 <Gets+4>      push   %esi                                                                                          │
+   │0x8048e95 <Gets+5>      push   %ebx                                                                                          │
+   │0x8048e96 <Gets+6>      sub    $0xc,%esp                                                                                     │
+   │0x8048e99 <Gets+9>      mov    0x804a1cc,%ebx                                                                                │
+   │0x8048e9f <Gets+15>     movl   $0x0,0x804a1e4   <__i686.get_pc_thunk.bx>                                                     │
+child 8048ea9 <Gets+25>     mov    0x8(%ebp),%esi                                                        Line: ??   PC: 0x8048e69 
+This G8048eac <Gets+28>     test   %ebx,%ebx                                                              Line: ??   PC: 0x49e920
+Temporary breakpoint 1 at 0x8049251
+                        smoke                                                                            Line: ??   PC: 0x8048e7a
+Breakpoint 2 at	0x8049006
+Team: Nguy_Jonathan
+Breakpoint 2, 0x08049006 in getbuf ()
+(gdb) ni
+0x08049009 in getbuf ()
+0x0804900c in getbuf ()
+0x08049011 in getbuf ()
+0x08049016 in getbuf ()
+0x08049017 in getbuf ()
+0x08048e50 in smoke ()
+0x08048e51 in smoke ()
+0x08048e53 in smoke ()
+0x08048e56 in smoke ()
+0x08048e5d in smoke ()
+0x08048e62 in smoke ()
+0x08048e69 in smoke ()
+Type string:Smoke!: You called smoke()
+0x08048e6e in smoke ()
+0x08048e75 in smoke ()
+Detaching after	fork from child	process	28973.
+NICE JOB!
+         Sent validation information to grading server
+0x08048e7a in smoke ()
+(gdb) 

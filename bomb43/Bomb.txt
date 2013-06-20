@@ -1,0 +1,262 @@
+Last login: Mon Nov  8 21:49:20 on console
+s3212-234:~ jonnyboy$ ssh nguy@lnxsrv01.seas.ucla.edu
+nguy@lnxsrv01.seas.ucla.edu's password: 
+Last login: Tue Oct 12 15:04:29 2010 from dhcp-156-187.physics.ucla.edu
+*****************************************************************************
+                 lnxsrv01.seas.ucla.edu RHEL 5
+*****************************************************************************
+
+    * Please use "lnxsrv.seas.ucla.edu" to login for load balancing
+    * User processes older than 36 hours will be cleaned up
+    * You can run graphical applications from your PC using SSH and Xming
+    !! Please see http://www.seasnet.ucla.edu/UnixServers/lnxsrv !!
+
+*****************************************************************************
+* ========================================================================= *
+* SEASnet Computing Access						    *	
+* ------------------------------------------------------------------------- *
+* Priority is given both on the servers and in the student labs to those    *
+* students doing coursework.  Computing support for research is provided by *
+*****************************************************************************
+* For assistance please contact help@seas.ucla.edu or call 206-6864.        *
+*****************************************************************************
+ 
+This file is /etc/motd. If you missed part of it, type 'more /etc/motd'.
+Last updated:  Fri Sep 17 11:29:36 PDT 2010
+[nguy@lnxsrv01 ~]$ mkdir cs33
+mkdir: cannot create directory `cs33': File exists
+[nguy@lnxsrv01 ~]$ cd cs33
+[nguy@lnxsrv01 ~/cs33]$ wget /Users/jonnyboy/Desktop/bomb43.tar 
+/Users/jonnyboy/Desktop/bomb43.tar: Unsupported scheme.
+[nguy@lnxsrv01 ~/cs33]$ wget http://dl.dropbox.com/u/4756741/bomb43.tar
+--2010-11-08 22:48:14--  http://dl.dropbox.com/u/4756741/bomb43.tar
+Resolving dl.dropbox.com... 174.129.13.72, 174.129.14.100, 174.129.15.18, ...
+Connecting to dl.dropbox.com|174.129.13.72|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 30720 (30K) [application/x-tar]
+Saving to: `bomb43.tar'
+
+100%[==========================================>] 30,720      94.6K/s   in 0.3s    
+
+2010-11-08 22:48:14 (94.6 KB/s) - `bomb43.tar' saved [30720/30720]
+
+[nguy@lnxsrv01 ~/cs33]$ tar xvf bombk.tar
+tar: bombk.tar: Cannot open: No such file or directory
+tar: Error is not recoverable: exiting now
+[nguy@lnxsrv01 ~/cs33]$ tar xvf bomb43.tar
+bomb43/README
+bomb43/bomb
+bomb43/bomb.c
+[nguy@lnxsrv01 ~/cs33]$ ls
+bits.c   bomb43      btest.c              datalab.pdf  dlc       tests.c
+bits.c~  bomb43.tar  btest.h              datalab.ps   Makefile
+bits.h   btest       datalab-handout.tar  decl.c       README
+[nguy@lnxsrv01 ~/cs33]$ gdb file bomb
+GNU gdb (GDB) Red Hat Enterprise Linux (7.0.1-23.el5_5.2)
+Copyright (C) 2009 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from /usr/bin/file...(no debugging symbols found)...done.
+/w/ugrad.08/cs/nguy/cs33/bomb: No such file or directory.
+(gdb) 
+Suspended
+[nguy@lnxsrv01 ~/cs33]$ 
+[nguy@lnxsrv01 ~/cs33]$ 
+[nguy@lnxsrv01 ~/cs33]$ mkdir proj2
+[nguy@lnxsrv01 ~/cs33]$ ls
+bits.c   bomb43      btest.c              datalab.pdf  dlc       README
+bits.c~  bomb43.tar  btest.h              datalab.ps   Makefile  tests.c
+bits.h   btest       datalab-handout.tar  decl.c       proj2
+[nguy@lnxsrv01 ~/cs33]$ cd proj2
+[nguy@lnxsrv01 proj2]$ wget /Users/jonnyboy/Desktop/bomb43.tar
+/Users/jonnyboy/Desktop/bomb43.tar: Unsupported scheme.
+[nguy@lnxsrv01 proj2]$ wget http://dl.dropbox.com/u/4756741/bomb43.tar
+--2010-11-08 22:52:06--  http://dl.dropbox.com/u/4756741/bomb43.tar
+Resolving dl.dropbox.com... 174.129.10.199, 174.129.11.212, 174.129.12.113, ...
+Connecting to dl.dropbox.com|174.129.10.199|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 30720 (30K) [application/x-tar]
+Saving to: `bomb43.tar'
+
+100%[==========================================>] 30,720      90.4K/s   in 0.3s    
+
+2010-11-08 22:52:06 (90.4 KB/s) - `bomb43.tar' saved [30720/30720]
+
+[nguy@lnxsrv01 proj2]$ ls
+bomb43.tar
+[nguy@lnxsrv01 proj2]$ tar xvf bomb43.tar
+bomb43/README
+bomb43/bomb
+bomb43/bomb.c
+[nguy@lnxsrv01 proj2]$ ls
+bomb43  bomb43.tar
+[nguy@lnxsrv01 proj2]$ cd bomb43
+[nguy@lnxsrv01 bomb43]$ ls
+bomb  bomb.c  README
+[nguy@lnxsrv01 bomb43]$ cd ..
+[nguy@lnxsrv01 proj2]$ cd ..
+[nguy@lnxsrv01 ~/cs33]$ ls
+bits.c   bomb43      btest.c              datalab.pdf  dlc       README
+bits.c~  bomb43.tar  btest.h              datalab.ps   Makefile  tests.c
+bits.h   btest       datalab-handout.tar  decl.c       proj2
+[nguy@lnxsrv01 ~/cs33]$ cd bomb43
+[nguy@lnxsrv01 bomb43]$ ls
+bomb  bomb.c  README
+[nguy@lnxsrv01 bomb43]$ gdb file bomb
+GNU gdb (GDB) Red Hat Enterprise Linux (7.0.1-23.el5_5.2)
+Copyright (C) 2009 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from /usr/bin/file...(no debugging symbols found)...done.
+"/w/ugrad.08/cs/nguy/cs33/bomb43/bomb" is not a core dump: File format not recognized
+(gdb) bomb.c
+Undefined command: "bomb".  Try "help".
+(gdb) file bomb.c
+"/w/ugrad.08/cs/nguy/cs33/bomb43/bomb.c": not in executable format: File format not recognized
+(gdb) file bomb
+Reading symbols from /w/ugrad.08/cs/nguy/cs33/bomb43/bomb...done.
+(gdb) ojbdump -t
+Undefined command: "ojbdump".  Try "help".
+(gdb) q
+[nguy@lnxsrv01 bomb43]$ ls
+bomb  bomb.c  README
+[nguy@lnxsrv01 bomb43]$ objdump -t bomb > input.txt
+[nguy@lnxsrv01 bomb43]$ ls
+bomb  bomb.c  input.txt  README
+[nguy@lnxsrv01 bomb43]$ emacs input.txt
+
+Suspended
+[nguy@lnxsrv01 bomb43]$ rm input.txt
+[nguy@lnxsrv01 bomb43]$ ls
+bomb  bomb.c  README
+[nguy@lnxsrv01 bomb43]$ objdump -t bomb > bombAssembly.txt
+[nguy@lnxsrv01 bomb43]$ ls
+bomb  bombAssembly.txt  bomb.c  README
+[nguy@lnxsrv01 bomb43]$ emacs bombAssembly.txt
+
+Suspended
+[nguy@lnxsrv01 bomb43]$ gdb
+GNU gdb (GDB) Red Hat Enterprise Linux (7.0.1-23.el5_5.2)
+Copyright (C) 2009 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+(gdb) file bomb
+Reading symbols from /w/ugrad.08/cs/nguy/cs33/bomb43/bomb...done.
+(gdb) list
+27	/* 
+28	 * Note to self: Remember to erase this file so my victims will have no
+29	 * idea what is going on, and so they will all blow up in a
+30	 * spectaculary fiendish explosion. -- Dr. Evil 
+31	 */
+32	
+33	FILE *infile;
+34	
+35	int main(int argc, char *argv[])
+36	{
+(gdb) step
+The program is not being run.
+(gdb) file bomb.c
+"/w/ugrad.08/cs/nguy/cs33/bomb43/bomb.c": not in executable format: File format not recognized
+(gdb) file bomb
+Load new symbol table from "/w/ugrad.08/cs/nguy/cs33/bomb43/bomb"? (y or n) n 
+Not confirmed.
+(gdb) 
+Suspended
+[nguy@lnxsrv01 bomb43]$ gcc -g -o bomb bomb.c
+bomb.c:24:21: error: support.h: No such file or directory
+bomb.c:25:20: error: phases.h: No such file or directory
+bomb.c: In function ‘main’:
+bomb.c:55: warning: incompatible implicit declaration of built-in function ‘exit’
+bomb.c:62: warning: incompatible implicit declaration of built-in function ‘exit’
+bomb.c:72: warning: assignment makes pointer from integer without a cast
+bomb.c:80: warning: assignment makes pointer from integer without a cast
+bomb.c:87: warning: assignment makes pointer from integer without a cast
+bomb.c:93: warning: assignment makes pointer from integer without a cast
+bomb.c:99: warning: assignment makes pointer from integer without a cast
+bomb.c:106: warning: assignment makes pointer from integer without a cast
+[nguy@lnxsrv01 bomb43]$ gdb
+GNU gdb (GDB) Red Hat Enterprise Linux (7.0.1-23.el5_5.2)
+Copyright (C) 2009 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+(gdb) file bomb
+Reading symbols from /w/ugrad.08/cs/nguy/cs33/bomb43/bomb...done.
+(gdb) 
+Suspended
+[nguy@lnxsrv01 bomb43]$ ls
+bomb  bombAssembly.txt  bomb.c  README
+[nguy@lnxsrv01 bomb43]$ gdbtui
+
+l: Command not found.
+[nguy@lnxsrv01 bomb43]$ s
+s: Command not found.
+[nguy@lnxsrv01 bomb43]$ ls
+bomb  bombAssembly.txt  bomb.c  README
+[nguy@lnxsrv01 bomb43]$ ls
+bomb  bombAssembly.txt  bomb.c  README
+[nguy@lnxsrv01 bomb43]$ ls
+bomb  bombAssembly.txt  bomb.c  README
+[nguy@lnxsrv01 bomb43]$ gdb
+GNU gdb (GDB) Red Hat Enterprise Linux (7.0.1-23.el5_5.2)
+Copyright (C) 2009 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+(gdb) file bomb
+Reading symbols from /w/ugrad.08/cs/nguy/cs33/bomb43/bomb...done.
+(gdb) start
+Temporary breakpoint 1 at 0x400d78: file bomb.c, line 36.
+Starting program: /w/ugrad.08/cs/nguy/cs33/bomb43/bomb 
+
+Temporary breakpoint 1, main (argc=1, argv=0x7fffffffe928) at bomb.c:36
+36	{
+(gdb) step
+44	    if (argc == 1) {  
+(gdb) step
+45		infile = stdin;
+(gdb) step
+66	    initialize_bomb();
+(gdb) step
+68	    printf("Welcome to my fiendish little bomb. You have 6 phases with\n");
+(gdb) step
+Welcome to my fiendish little bomb. You have 6 phases with
+69	    printf("which to blow yourself up. Have a nice day!\n");
+(gdb) step
+which to blow yourself up. Have a nice day!
+72	    input = read_line();             /* Get input                   */
+(gdb) step
+stop 
+73	    phase_1(input);                  /* Run the phase               */
+(gdb) step
+
+BOOM!!!
+The bomb has blown up.
+Detaching after fork from child process 20740.
+Your instructor has been notified.
+
+Program exited with code 010.
+(gdb) 

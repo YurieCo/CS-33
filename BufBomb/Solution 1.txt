@@ -1,0 +1,146 @@
+Last login: Thu Dec  2 21:13:02 on ttys000
+s3212-234:~ jonnyboy$ ssh nguy@lnxsrv01.seas.ucla.edu
+nguy@lnxsrv01.seas.ucla.edu's password: 
+Last login: Thu Dec  2 21:13:15 2010 from s3212-234.resnet.ucla.edu
+*****************************************************************************
+                 lnxsrv01.seas.ucla.edu RHEL 5
+*****************************************************************************
+
+    * Please use "lnxsrv.seas.ucla.edu" to login for load balancing
+    * User processes older than 36 hours will be cleaned up
+    * You can run graphical applications from your PC using SSH and Xming
+    !! Please see http://www.seasnet.ucla.edu/UnixServers/lnxsrv !!
+
+*****************************************************************************
+* ========================================================================= *
+* SEASnet Computing Access						    *	
+* ------------------------------------------------------------------------- *
+* Priority is given both on the servers and in the student labs to those    *
+* students doing coursework.  Computing support for research is provided by *
+*****************************************************************************
+* For assistance please contact help@seas.ucla.edu or call 206-6864.        *
+*****************************************************************************
+ 
+This file is /etc/motd. If you missed part of it, type 'more /etc/motd'.
+Last updated:  Fri Sep 17 11:29:36 PDT 2010
+[nguy@lnxsrv01 ~]$ ls
+AGREEMENT  Application Data  bits.c  cs33  Desktop  My Documents  nsdefault  WINDOWS
+[nguy@lnxsrv01 ~]$ cd cs33/buflab
+[nguy@lnxsrv01 buflab]$ ls
+assem.txt                core.16614  core.19683  core.686          #exploit.txt#  gdbn.cmd              #sendstring#  test.s
+bufbomb                  core.16745  core.23682  core.6899         exploit.txt    gdbn.cmd~             #test.d#      test.s~
+buflabNguy_Jonathan.tar  core.17660  core.26713  core.8934         exploit.txt~   Nguy_Jonathan_cookie  test.d
+core.13658               core.17760  core.27734  exploit-raw.txt   gdb.cmd        real.txt              test.d~
+core.15694               core.17788  core.29985  exploit-raw.txt~  gdb.cmd~       sendstring            test.o
+[nguy@lnxsrv01 buflab]$ rm core.*
+[nguy@lnxsrv01 buflab]$ ls
+assem.txt                exploit-raw.txt   exploit.txt   gdb.cmd~   Nguy_Jonathan_cookie  #sendstring#  test.d~  test.s~
+bufbomb                  exploit-raw.txt~  exploit.txt~  gdbn.cmd   real.txt              #test.d#      test.o
+buflabNguy_Jonathan.tar  #exploit.txt#     gdb.cmd       gdbn.cmd~  sendstring            test.d        test.s
+[nguy@lnxsrv01 buflab]$ emacs gdb.cmd
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs exploit.txt
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ ls
+assem.txt                exploit-raw.txt   exploit.txt   gdb.cmd~   Nguy_Jonathan_cookie  #sendstring#  test.d~  test.s~
+bufbomb                  exploit-raw.txt~  exploit.txt~  gdbn.cmd   real.txt              #test.d#      test.o
+buflabNguy_Jonathan.tar  #exploit.txt#     gdb.cmd       gdbn.cmd~  sendstring            test.d        test.s
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+
+
+
+
+
+
+
+
+
+
+
+
+│edx            0x0      0                                       ebx            0x4abfc0 4898752                                 │
+│esi            0x0      0             6764                      edi            0x2e     46            67d0                      │
+│edx            0x603ff4 6307828                                 eflags         0x383a5a5f       943348319                       │
+│cs             0x49e9709cx49e920 <_dl_709cg_state>              eflags         0x246 70b4 PF ZF IF ]  70b4                      │
+│ds             0xf08    3848                                    es             0x2b     43                                      │
+│fs             0x8048e4c        0x8048e4c <fizz+92>             gs             0x63     99                                      │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+   ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+   │0x8048df0 <fizz>        push   %ebp                                                                                          │
+B+>│0x49e920 <_dl_debug_state>      push   %ebp                                                                                  │
+   │0x49e921 <_dl_debug_state+1>    mov    %esp,%ebp                                                                             │
+   │0x8048e12 <fizz+34>     movl   $0x8049960,(%esp)                                                                             │
+   │0x8048e19 <fizz+41>     call   0x80487e0 <printf@plt>                                                                        │
+   │0x8048e1e <fizz+46>     movl   $0x0,(%esp)                                                                                   │
+   │0x8048e25 <fizz+53>     call   0x80488a0 <exit@plt>ck>                                                                       │
+   │0x8048e2a <fizz+58>     lea    0x0(%esi),%esi                                                                                │
+   │0x8048e30 <fizz+64>     mov    %ebx,0x4(%esp)                                                                                │
+   │0x8048e34 <fizz+68>     movl   $0x8049b0e,(%esp)                                                                             │
+   │0x8048e3b <fizz+75>     call   0x80487e0 <printf@plt>                                                                        │
+   │0x8048e40 <fizz+80>     movl   $0x1,(%esp)      @plt>                                                                        │
+   │0x8048e47 <fizz+87>     call   0x8048b20 <validate>                                                                          │
+  >│0x8048e4c <fizz+92>     jmp    0x8048e1e <fizz+46>>                                                                          │
+   │0x8048e4e               xchg   %ax,%ax                                                                                       │
+   │0x8048e50 <smoke>       push   %ebp                                                                                          │
+   │0x8048e51 <smoke+1>     mov    %esp,%ebpebp                                                                                  │
+  >│0x8048e53 <smoke+3>     sub    $0x8,%espesp,%ebp@plt>                                                                        │
+   │0x8048e56 <smoke+6>     movl   $0x0,(%esp)                                                                                   │
+   │0x8048e5d <smoke+13>    call   0x80489e0 <entry_check>                                                                       │
+   │0x8048e62 <smoke+18>    movl   $0x8049b2c,(%esp)                                                                             │
+   │0x8048e69 <smoke+25>    call   0x8048850 <puts@plt>                                                                          │
+   │0x8048e6e <smoke+30>    movl   $0x0,(%esp)                                                                                   │
+   └──8048e75 <smoke+37>    call   0x8048b20 <validate>i686.get_pc_thunk.bx>─────────────────────────────────────────────────────┘
+child 8048e7a <smoke+42>    movl   $0x0,(%esp)                                                           Line: ??   PC: 0x8048e3b 
+      8048e81 <smoke+49>    call   0x80488a0 <exit@plt>                                                   Line: ??   PC: 0x49e920
+Breakpoint 2, 0x08049006 in getbuf ()
+(gdb) ni                fizz                                                                             Line: ??   PC: 0x8048e4c
+0x0804900c in getbuf ()
+0x08049011 in getbuf ()
+0x08049016 in getbuf ()
+0x08049017 in getbuf ()
+0x08048df0 in fizz ()
+0x08048df1 in fizz ()
+0x08048df3 in fizz ()
+0x08048df4 in fizz ()
+0x08048df7 in fizz ()
+0x08048dfa in fizz ()
+0x08048e01 in fizz ()
+0x08048e06 in fizz ()
+0x08048e0c in fizz ()
+0x08048e30 in fizz ()
+0x08048e34 in fizz ()
+0x08048e3b in fizz ()
+Type string:Fizz!: You called fizz(0x383a5a5f)
+0x08048e40 in fizz ()
+0x08048e47 in fizz ()
+Detaching after	fork from child	process	30062.
+NICE JOB!
+         Sent validation information to grading server
+0x08048e4c in fizz ()
+(gdb) 

@@ -1,0 +1,149 @@
+Last login: Tue Nov  9 20:44:51 on ttys001
+s1227-66:~ jonnyboy$ ssh nguy@lnxsrv01.seas.ucla.edu
+nguy@lnxsrv01.seas.ucla.edu's password: 
+Last login: Tue Nov  9 19:54:09 2010 from s1227-66.resnet.ucla.edu
+*****************************************************************************
+                 lnxsrv01.seas.ucla.edu RHEL 5
+*****************************************************************************
+
+    * Please use "lnxsrv.seas.ucla.edu" to login for load balancing
+    * User processes older than 36 hours will be cleaned up
+    * You can run graphical applications from your PC using SSH and Xming
+    !! Please see http://www.seasnet.ucla.edu/UnixServers/lnxsrv !!
+
+*****************************************************************************
+* ========================================================================= *
+* SEASnet Computing Access						    *	
+* ------------------------------------------------------------------------- *
+* Priority is given both on the servers and in the student labs to those    *
+* students doing coursework.  Computing support for research is provided by *
+*****************************************************************************
+* For assistance please contact help@seas.ucla.edu or call 206-6864.        *
+*****************************************************************************
+ 
+This file is /etc/motd. If you missed part of it, type 'more /etc/motd'.
+Last updated:  Fri Sep 17 11:29:36 PDT 2010
+[nguy@lnxsrv01 ~]$ cd cs33/bomb43
+[nguy@lnxsrv01 bomb43]$ ls
+bomb              core.23444  core.25951   input.txt~
+bombAssembly.txt  core.23519  core.26151   README
+bomb.c            core.23534  #input.txt#  realassem.txt
+core.23314        core.25286  input.txt    string.txt
+[nguy@lnxsrv01 bomb43]$ emacs input.txt
+[nguy@lnxsrv01 bomb43]$ ls
+bomb              core.23314  core.23534  core.26151   input.txt~     string.txt
+bombAssembly.txt  core.23444  core.25286  #input.txt#  README
+bomb.c            core.23519  core.25951  input.txt    realassem.txt
+[nguy@lnxsrv01 bomb43]$ emacs input.txt
+
+Suspended
+[nguy@lnxsrv01 bomb43]$ gdbtui
+[nguy@lnxsrv01 bomb43]$ gdbtui
+[nguy@lnxsrv01 bomb43]$ gdbtui
+[nguy@lnxsrv01 bomb43]$ gdbtui
+[nguy@lnxsrv01 bomb43]$ gdbtui
+
+Suspended
+[nguy@lnxsrv01 bomb43]$ gdbtui
+[nguy@lnxsrv01 bomb43]$ gdbtui
+[nguy@lnxsrv01 bomb43]$ gdbtui
+[nguy@lnxsrv01 bomb43]$ gdbtui
+[nguy@lnxsrv01 bomb43]$ emacs input.txt
+
+Suspended
+[nguy@lnxsrv01 bomb43]$ gdbtui bomb
+[nguy@lnxsrv01 bomb43]$ gdbtui bomb
+[nguy@lnxsrv01 bomb43]$ gdbtui bomb
+[nguy@lnxsrv01 bomb43]$ gdbtui bomb
+[nguy@lnxsrv01 bomb43]$ gdbtui bomb
+[nguy@lnxsrv01 bomb43]$ gdbtui bomb
+[nguy@lnxsrv01 bomb43]$ gdbtui bomb
+[nguy@lnxsrv01 bomb43]$ gdbtui bomb
+[nguy@lnxsrv01 bomb43]$ gdbtui bomb
+[nguy@lnxsrv01 bomb43]$ gdbtui bomb
+
+Suspended
+[nguy@lnxsrv01 bomb43]$ emacs input.txt
+[nguy@lnxsrv01 bomb43]$ gdbtui bomb
+[nguy@lnxsrv01 bomb43]$ gdbtui bomb
+[nguy@lnxsrv01 bomb43]$ gdbtui bomb
+[nguy@lnxsrv01 bomb43]$ gdbtui bomb
+[nguy@lnxsrv01 bomb43]$ gdbtui bomb
+[nguy@lnxsrv01 bomb43]$ gdbtui bomb
+
+Suspended
+[nguy@lnxsrv01 bomb43]$ gdbtui bomb
+
+Suspended
+[nguy@lnxsrv01 bomb43]$ emacs input.txt
+[nguy@lnxsrv01 bomb43]$ emacs input.txt
+
+Suspended
+[nguy@lnxsrv01 bomb43]$ gdbtui bomb
+[nguy@lnxsrv01 bomb43]$ gdbtui bomb
+
+Suspended
+[nguy@lnxsrv01 bomb43]$ gdbtui bob
+[nguy@lnxsrv01 bomb43]$ gdbtui bomb
+[nguy@lnxsrv01 bomb43]$ gdbtui bomb
+[nguy@lnxsrv01 bomb43]$ gdbtui bomb
+
+Suspended
+[nguy@lnxsrv01 bomb43]$ gdbtui bomb
+[nguy@lnxsrv01 bomb43]$ gdbtui bomb
+[nguy@lnxsrv01 bomb43]$ gdbtui bomb
+[nguy@lnxsrv01 bomb43]$ gdbtui bomb
+
+
+Temporary breakpoint 2, main (argc=1, argv=0x7fffffffe938) at bomb.c:36
+36	{
+(gdb) c
+Continuing.
+Welcome to my fiendish little bomb. You have 6 phases with
+which to blow yourself up. Have a nice day!
+
+Program received signal SIGTSTP, Stopped (user).
+0x0000003d16ac6240 in __read_nocancel () from /lib64/libc.so.6
+(gdb) file bomb
+A program is being debugged already.
+Are you sure you want to change the file? (y or n)   
+Suspended
+[nguy@lnxsrv01 bomb43]$ gdb bomb
+GNU gdb (GDB) Red Hat Enterprise Linux (7.0.1-23.el5_5.2)
+Copyright (C) 2009 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from /w/ugrad.08/cs/nguy/cs33/bomb43/bomb...done.
+(gdb) start input.txt
+Temporary breakpoint 1 at 0x400d78: file bomb.c, line 36.
+Starting program: /w/ugrad.08/cs/nguy/cs33/bomb43/bomb input.txt
+
+Temporary breakpoint 1, main (argc=2, argv=0x7fffffffe928) at bomb.c:36
+36	{
+(gdb) b explode_bomb
+Breakpoint 2 at 0x4014db
+(gdb) c
+Continuing.
+Welcome to my fiendish little bomb. You have 6 phases with
+which to blow yourself up. Have a nice day!
+Detaching after fork from child process 17742.
+Phase 1 defused. How about the next one?
+Detaching after fork from child process 17749.
+That's number 2.  Keep going!
+Detaching after fork from child process 17752.
+Halfway there!
+Detaching after fork from child process 17758.
+So you got that one.  Try this one.
+Detaching after fork from child process 17761.
+Good work!  On to the next...
+Detaching after fork from child process 17767.
+Congratulations! You've defused the bomb!
+Your instructor has been notified and will verify your solution.
+
+Program exited normally.
+(gdb) 

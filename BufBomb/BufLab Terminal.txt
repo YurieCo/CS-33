@@ -1,0 +1,419 @@
+Last login: Tue Nov 30 23:31:03 on console
+s1227-138:~ jonnyboy$ ssh nguy@lnxsrv01.seas.ucla.edu
+nguy@lnxsrv01.seas.ucla.edu's password: 
+Last login: Mon Nov 29 21:11:16 2010 from s3212-234.resnet.ucla.edu
+*****************************************************************************
+                 lnxsrv01.seas.ucla.edu RHEL 5
+*****************************************************************************
+
+    * Please use "lnxsrv.seas.ucla.edu" to login for load balancing
+    * User processes older than 36 hours will be cleaned up
+    * You can run graphical applications from your PC using SSH and Xming
+    !! Please see http://www.seasnet.ucla.edu/UnixServers/lnxsrv !!
+
+*****************************************************************************
+* ========================================================================= *
+* SEASnet Computing Access						    *	
+* ------------------------------------------------------------------------- *
+* Priority is given both on the servers and in the student labs to those    *
+* students doing coursework.  Computing support for research is provided by *
+*****************************************************************************
+* For assistance please contact help@seas.ucla.edu or call 206-6864.        *
+*****************************************************************************
+ 
+This file is /etc/motd. If you missed part of it, type 'more /etc/motd'.
+Last updated:  Fri Sep 17 11:29:36 PDT 2010
+[nguy@lnxsrv01 ~]$ ls
+AGREEMENT  Application Data  bits.c  cs33  Desktop  My Documents  nsdefault  WINDOWS
+[nguy@lnxsrv01 ~]$ cd cs33/buflab
+[nguy@lnxsrv01 buflab]$ ls
+assem.txt  bufbomb  buflabNguy_Jonathan.tar  exploit_raw.txt  exploit.txt  exploit.txt~  gdb.cmd  gdb.cmd~  Nguy_Jonathan_cookie  real.txt  sendstring  #sendstring#
+[nguy@lnxsrv01 buflab]$ gdbtui
+
+Suspended
+[nguy@lnxsrv01 buflab]$ gcc -c example.s
+gcc: example.s: No such file or directory
+gcc: no input files
+[nguy@lnxsrv01 buflab]$ start exploit.txt
+start: Command not found.
+[nguy@lnxsrv01 buflab]$ gdbtui bufbomb
+[nguy@lnxsrv01 buflab]$ gdbtui bufbomb
+
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs exploit_raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui bufbomb
+
+Suspended
+[nguy@lnxsrv01 buflab]$ gdbtui bufbomb
+
+Suspended
+[nguy@lnxsrv01 buflab]$ cat exploit.txt | ./sendstring | ./bufbomb -t Nguy_Jonathan
+Team: Nguy_Jonathan
+Cookie: 0x383a5a5f
+Type string:Dud: getbuf returned 0x1
+Better luck next time
+[nguy@lnxsrv01 buflab]$ emacs exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ emacs exploit.txt
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ emacs exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ emacs exploit-raw.txt
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs exploit.txt
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ emacs exploit.txt
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs exploit-raw.txt
+
+Suspended
+[nguy@lnxsrv01 buflab]$ gdbtui bufbomb
+[nguy@lnxsrv01 buflab]$ gdbtui bufbomb
+
+Suspended
+[nguy@lnxsrv01 buflab]$ layout exploit_raw.txt
+layout: Command not found.
+[nguy@lnxsrv01 buflab]$ emacs exploit_raw.txt
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui bufbomb
+[nguy@lnxsrv01 buflab]$ gdbtui bufbomb
+[nguy@lnxsrv01 buflab]$ gdbtui bufbomb
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ emacs exploit-raw.txt
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs exploit.txt
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ emacs exploit-raw.txt
+
+Suspended
+[nguy@lnxsrv01 buflab]$ gdbtui bufbomb
+[nguy@lnxsrv01 buflab]$ gdbtui bufbomb
+[nguy@lnxsrv01 buflab]$ gdbtui bufbomb
+[nguy@lnxsrv01 buflab]$ gdbtui bufbomb
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+
+Suspended
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs exploit.txt
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ ls
+assem.txt  buflabNguy_Jonathan.tar  exploit-raw.txt~  exploit.txt~  gdb.cmd~              real.txt    #sendstring#
+bufbomb    exploit-raw.txt          exploit.txt       gdb.cmd       Nguy_Jonathan_cookie  sendstring
+[nguy@lnxsrv01 buflab]$ emacs exploit.txt
+[nguy@lnxsrv01 buflab]$ ./bufbomb -t Nguy_Jonathan
+Team: Nguy_Jonathan
+Cookie: 0x383a5a5f
+Type string:^[[A^[[A
+Dud: getbuf returned 0x1
+Better luck next time
+[nguy@lnxsrv01 buflab]$ emacs exploit.txt
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+
+Suspended
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs exploit.txt
+
+Suspended
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ emacs exploit.txt
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ emacs exploit.txt
+
+Suspended
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ emacs exploit.txt
+[nguy@lnxsrv01 buflab]$ emacs exploit.txt
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ touch test.s
+[nguy@lnxsrv01 buflab]$ emacs test.s
+
+Suspended
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ gcc -c test.s
+test.s: Assembler messages:
+test.s:0: Warning: end of file not at end of a line; newline inserted
+test.s:1: Error: too many memory references for `mov'
+[nguy@lnxsrv01 buflab]$ emacs test.s
+[nguy@lnxsrv01 buflab]$ gcc -c test.s
+[nguy@lnxsrv01 buflab]$ objdump -d test.o > test.d
+[nguy@lnxsrv01 buflab]$ ls
+assem.txt  buflabNguy_Jonathan.tar  exploit-raw.txt~  exploit.txt~  gdb.cmd~              real.txt    #sendstring#  test.o  test.s~
+bufbomb    exploit-raw.txt          exploit.txt       gdb.cmd       Nguy_Jonathan_cookie  sendstring  test.d        test.s
+[nguy@lnxsrv01 buflab]$ emacs test.d
+[nguy@lnxsrv01 buflab]$ emacs exploit.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+
+Suspended
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ objdump -d test.o > test.d
+[nguy@lnxsrv01 buflab]$ emacs test.d
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs exploit.txt
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs test.d
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs exploit.txt
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs test.d
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs exploit.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs exploit.txt
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ emacs test.d
+
+Suspended
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ objdump -d test.o > test.d
+[nguy@lnxsrv01 buflab]$ emacs test.d
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs test.s
+[nguy@lnxsrv01 buflab]$ gcc -c test.s
+[nguy@lnxsrv01 buflab]$ objdump -d test.o > test.d
+[nguy@lnxsrv01 buflab]$ emacs test.d
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs exploit.txt
+[nguy@lnxsrv01 buflab]$ emacs exploit.txt
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs test.s
+[nguy@lnxsrv01 buflab]$ emacs exploit.txt
+[nguy@lnxsrv01 buflab]$ gcc -c test.s
+[nguy@lnxsrv01 buflab]$ objdump -d test.o > test.d
+[nguy@lnxsrv01 buflab]$ emacs test.d
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs test.d
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs test.s
+[nguy@lnxsrv01 buflab]$ objdump -d test.o > test.d
+[nguy@lnxsrv01 buflab]$ emacs test.d
+
+Suspended
+[nguy@lnxsrv01 buflab]$ gcc -c test.s
+test.s: Assembler messages:
+test.s:2: Error: too many memory references for `add'
+[nguy@lnxsrv01 buflab]$ emacs test.s
+[nguy@lnxsrv01 buflab]$ gcc -c test.s
+[nguy@lnxsrv01 buflab]$ objdump -d test.o > test.d
+[nguy@lnxsrv01 buflab]$ emacs test.d
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs test.s
+[nguy@lnxsrv01 buflab]$ gcc -c test.s
+[nguy@lnxsrv01 buflab]$ objdump -d test.o > test.d
+[nguy@lnxsrv01 buflab]$ emacs test.s
+
+Suspended
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs test.s
+[nguy@lnxsrv01 buflab]$ gcc -c test.s
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs test.s
+
+Suspended
+[nguy@lnxsrv01 buflab]$ gcc -c -m32 --32 test.s
+[nguy@lnxsrv01 buflab]$ objdump -d test.o > test.d
+[nguy@lnxsrv01 buflab]$ emacs test.d
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs test.s
+[nguy@lnxsrv01 buflab]$ gcc -c -m32 --32 test.s
+[nguy@lnxsrv01 buflab]$ objdump -d test.o > test.d
+[nguy@lnxsrv01 buflab]$ emacs test.d
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs test.s
+[nguy@lnxsrv01 buflab]$ gcc -c -m32 --32 test.s
+[nguy@lnxsrv01 buflab]$ objdump -d test.o > test.d
+[nguy@lnxsrv01 buflab]$ emacs test.d
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs test.s
+[nguy@lnxsrv01 buflab]$ gcc -c -m32 --32 test.s
+test.s: Assembler messages:
+test.s:1: Error: too many memory references for `lea'
+[nguy@lnxsrv01 buflab]$ emacs test.s
+[nguy@lnxsrv01 buflab]$ gcc -c -m32 --32 test.s
+[nguy@lnxsrv01 buflab]$ objdump -d test.o > test.d
+[nguy@lnxsrv01 buflab]$ emacs test.d
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs test.s
+[nguy@lnxsrv01 buflab]$ gcc -c -m32 --32 test.s
+[nguy@lnxsrv01 buflab]$ objdump -d test.o > test.d
+[nguy@lnxsrv01 buflab]$ emacs test.d
+
+Suspended
+[nguy@lnxsrv01 buflab]$ gcc -c -m32 -32 test.s
+gcc: unrecognized option '-32'
+[nguy@lnxsrv01 buflab]$ gcc -c -m32 --32 test.s
+[nguy@lnxsrv01 buflab]$ objdump -d test.o > test.d
+[nguy@lnxsrv01 buflab]$ emacs test.d
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs test.s
+[nguy@lnxsrv01 buflab]$ gcc -c -m32 --32 test.s
+[nguy@lnxsrv01 buflab]$ objdump -d test.o > test.d
+[nguy@lnxsrv01 buflab]$ emacs test.d
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs test.s
+[nguy@lnxsrv01 buflab]$ emacs test.s
+[nguy@lnxsrv01 buflab]$ gcc -c -m32 --32 test.s
+[nguy@lnxsrv01 buflab]$ objdump -d test.o > test.d
+[nguy@lnxsrv01 buflab]$ emacs test.d
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs test.s
+[nguy@lnxsrv01 buflab]$ gcc -c -m32 --32 test.s
+[nguy@lnxsrv01 buflab]$ objdump -d test.o > test.d
+[nguy@lnxsrv01 buflab]$ emacs test.d
+[nguy@lnxsrv01 buflab]$ emacs exploit.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+
+Suspended
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+
+Suspended
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+
+Suspended
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ emacs exploit.txt
+
+Suspended
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs test.d
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs test.s
+
+Suspended
+[nguy@lnxsrv01 buflab]$ gcc -c -m32 --32 test.s
+[nguy@lnxsrv01 buflab]$ objdump -d test.o > test.d
+[nguy@lnxsrv01 buflab]$ emacs test.d
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs exploit.txt
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

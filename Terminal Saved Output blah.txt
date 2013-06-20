@@ -1,0 +1,124 @@
+Last login: Tue Oct 12 14:58:34 on ttys000
+Jonathan-Nguys-MacBook:~ JonnyBoy$ ssh nguy@lnxsrv01.seas.ucla.edu
+nguy@lnxsrv01.seas.ucla.edu's password: 
+Last login: Mon Oct 11 21:20:25 2010 from s1227-223.resnet.ucla.edu
+*****************************************************************************
+                 lnxsrv01.seas.ucla.edu RHEL 5
+*****************************************************************************
+
+    * Please use "lnxsrv.seas.ucla.edu" to login for load balancing
+    * User processes older than 36 hours will be cleaned up
+    * You can run graphical applications from your PC using SSH and Xming
+    !! Please see http://www.seasnet.ucla.edu/UnixServers/lnxsrv !!
+
+*****************************************************************************
+* ========================================================================= *
+* SEASnet Computing Access						    *	
+* ------------------------------------------------------------------------- *
+* Priority is given both on the servers and in the student labs to those    *
+* students doing coursework.  Computing support for research is provided by *
+*****************************************************************************
+* For assistance please contact help@seas.ucla.edu or call 206-6864.        *
+*****************************************************************************
+ 
+This file is /etc/motd. If you missed part of it, type 'more /etc/motd'.
+Last updated:  Fri Sep 17 11:29:36 PDT 2010
+[nguy@lnxsrv01 ~]$ cd cs33
+[nguy@lnxsrv01 ~/cs33]$ make
+gcc -O -Wall -o btest bits.c btest.c decl.c tests.c
+[nguy@lnxsrv01 ~/cs33]$ chmod +x dlc
+[nguy@lnxsrv01 ~/cs33]$ ./dlc 
+[nguy@lnxsrv01 ~/cs33]$ ./bits.c
+./bits.c: Permission denied.
+[nguy@lnxsrv01 ~/cs33]$ chmod +x bits.c
+[nguy@lnxsrv01 ~/cs33]$ ./bits.c
+./bits.c: line 1: /bin: is a directory
+./bits.c: line 2: bits.c: command not found
+./bits.c: line 3: bits.c: command not found
+./bits.c: line 4: bits.c: command not found
+./bits.c: line 5: bits.c: command not found
+./bits.c: line 6: bits.c: command not found
+./bits.c: line 7: stdio.h: No such file or directory
+./bits.c: line 7: it: command not found
+./bits.c: line 8: bits.c: command not found
+./bits.c: line 9: stdio.h: No such file or directory
+./bits.c: line 11: bits.c: command not found
+./bits.c: line 12: */: No such file or directory
+./bits.c: line 17: /bin: is a directory
+./bits.c: line 18: bits.c: command not found
+./bits.c: line 19: bits.c: command not found
+./bits.c: line 20: bits.c: command not found
+./bits.c: line 21: */: No such file or directory
+./bits.c: line 22: team_struct: command not found
+./bits.c: line 24: /bin: is a directory
+./bits.c: line 25: nguy,: command not found
+./bits.c: line 26: /bin: is a directory
+./bits.c: line 27: Jonathan Nguy,: command not found
+./bits.c: line 31: /bin: is a directory
+./bits.c: line 32: bits.c: command not found
+./bits.c: line 33: */: No such file or directory
+./bits.c: line 35: You: command not found
+./bits.c: line 36: editing: command not found
+./bits.c: line 38: CODING: command not found
+./bits.c: line 40: Replace: command not found
+./bits.c: line 41: or: command not found
+./bits.c: line 42: must: command not found
+./bits.c: line 44: syntax error near unexpected token `('
+./bits.c: line 44: `  int Funct(arg1, arg2, ...) {'
+[nguy@lnxsrv01 ~/cs33]$ ./btest 
+User name: nguy
+Full name:	Jonathan Nguy
+
+Test bitAnd score: 1.00/1.00
+Test bitMask score: 3.00/3.00
+Test bitParity score: 4.00/4.00
+Test bitXor score: 2.00/2.00
+Test conditional score: 3.00/3.00
+Test copyLSB score: 2.00/2.00
+Test evenBits score: 2.00/2.00
+Test getByte score: 2.00/2.00
+Test isLess score: 3.00/3.00
+Test isNonZero score: 4.00/4.00
+Test isPower2 score: 4.00/4.00
+Test isZero score: 1.00/1.00
+Test logicalNeg score: 4.00/4.00
+Test multFiveEights score: 3.00/3.00
+Test negate score: 2.00/2.00
+Overall correctness score: 40.00/40.00
+All tests passed.
+[nguy@lnxsrv01 ~/cs33]$ ./dlc
+[nguy@lnxsrv01 ~/cs33]$ ./dlc bits.c
+[nguy@lnxsrv01 ~/cs33]$ scp bits.c nguy@lnxsrv01.seas.ucla.edu:~/
+The authenticity of host 'lnxsrv01.seas.ucla.edu (164.67.100.231)' can't be established.
+RSA key fingerprint is e3:e4:48:85:c2:81:53:ea:b6:d7:a0:cb:bd:f3:80:f5.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'lnxsrv01.seas.ucla.edu,164.67.100.231' (RSA) to the list of known hosts.
+nguy@lnxsrv01.seas.ucla.edu's password: 
+bits.c                                        100% 8212     8.0KB/s   00:00    
+[nguy@lnxsrv01 ~/cs33]$ exit
+logout
+
+
+Goodbye.
+Connection to lnxsrv01.seas.ucla.edu closed.
+Jonathan-Nguys-MacBook:~ JonnyBoy$ scp nguy@lnxsrv01.seas.ucla.edu:~/bits.c ./
+nguy@lnxsrv01.seas.ucla.edu's password: 
+bits.c                                        100% 8212     8.0KB/s   00:00    
+Jonathan-Nguys-MacBook:~ JonnyBoy$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

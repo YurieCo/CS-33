@@ -1,0 +1,146 @@
+Last login: Thu Dec  2 21:13:02 on ttys000
+s3212-234:~ jonnyboy$ ssh nguy@lnxsrv01.seas.ucla.edu
+nguy@lnxsrv01.seas.ucla.edu's password: 
+Last login: Thu Dec  2 21:13:15 2010 from s3212-234.resnet.ucla.edu
+*****************************************************************************
+                 lnxsrv01.seas.ucla.edu RHEL 5
+*****************************************************************************
+
+    * Please use "lnxsrv.seas.ucla.edu" to login for load balancing
+    * User processes older than 36 hours will be cleaned up
+    * You can run graphical applications from your PC using SSH and Xming
+    !! Please see http://www.seasnet.ucla.edu/UnixServers/lnxsrv !!
+
+*****************************************************************************
+* ========================================================================= *
+* SEASnet Computing Access						    *	
+* ------------------------------------------------------------------------- *
+* Priority is given both on the servers and in the student labs to those    *
+* students doing coursework.  Computing support for research is provided by *
+*****************************************************************************
+* For assistance please contact help@seas.ucla.edu or call 206-6864.        *
+*****************************************************************************
+ 
+This file is /etc/motd. If you missed part of it, type 'more /etc/motd'.
+Last updated:  Fri Sep 17 11:29:36 PDT 2010
+[nguy@lnxsrv01 ~]$ ls
+AGREEMENT  Application Data  bits.c  cs33  Desktop  My Documents  nsdefault  WINDOWS
+[nguy@lnxsrv01 ~]$ cd cs33/buflab
+[nguy@lnxsrv01 buflab]$ ls
+assem.txt                core.16614  core.19683  core.686          #exploit.txt#  gdbn.cmd              #sendstring#  test.s
+bufbomb                  core.16745  core.23682  core.6899         exploit.txt    gdbn.cmd~             #test.d#      test.s~
+buflabNguy_Jonathan.tar  core.17660  core.26713  core.8934         exploit.txt~   Nguy_Jonathan_cookie  test.d
+core.13658               core.17760  core.27734  exploit-raw.txt   gdb.cmd        real.txt              test.d~
+core.15694               core.17788  core.29985  exploit-raw.txt~  gdb.cmd~       sendstring            test.o
+[nguy@lnxsrv01 buflab]$ rm core.*
+[nguy@lnxsrv01 buflab]$ ls
+assem.txt                exploit-raw.txt   exploit.txt   gdb.cmd~   Nguy_Jonathan_cookie  #sendstring#  test.d~  test.s~
+bufbomb                  exploit-raw.txt~  exploit.txt~  gdbn.cmd   real.txt              #test.d#      test.o
+buflabNguy_Jonathan.tar  #exploit.txt#     gdb.cmd       gdbn.cmd~  sendstring            test.d        test.s
+[nguy@lnxsrv01 buflab]$ emacs gdb.cmd
+
+Suspended
+[nguy@lnxsrv01 buflab]$ emacs exploit.txt
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+[nguy@lnxsrv01 buflab]$ ./sendstring < exploit.txt > exploit-raw.txt
+[nguy@lnxsrv01 buflab]$ ls
+assem.txt                exploit-raw.txt   exploit.txt   gdb.cmd~   Nguy_Jonathan_cookie  #sendstring#  test.d~  test.s~
+bufbomb                  exploit-raw.txt~  exploit.txt~  gdbn.cmd   real.txt              #test.d#      test.o
+buflabNguy_Jonathan.tar  #exploit.txt#     gdb.cmd       gdbn.cmd~  sendstring            test.d        test.s
+[nguy@lnxsrv01 buflab]$ gdbtui -x gdb.cmd bufbomb
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+│edx            0x0      0                                       ebp            0x4abfc0 4898752 0x555870d0                      │
+│esi            0x0      0             6780                      edi            0x2e     46            67ec                      │
+│edx            0x603ff4 6307828                                 eflags         0x1fa0   8096    IF ]                            │
+│cs             0x49e970b8x49e920 <_dl_70b8g_state>              eflags         0x246 70d0 PF ZF IF ]  70d0                      │
+│ds             0xf08    3848                                    es             0x2b     43                                      │
+│fs             0x804908e        0x804908e <test+110>            gs             0x63     99                                      │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+│                                                                                                                                │
+   ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+   │0x8049039 <test+25>     call   0x8049000 <getbuf>                                                                            │
+B+>│0x49e920 <_dl_debug_state>      push   %ebp                                                                                  │
+   │0x49e921 <_dl_debug_state+1>    mov    %esp,%ebp                                                                             │
+   │0x8049060 <test+64>     mov    %edx,0x4(%esp) x                                                                              │
+   │0x8049064 <test+68>     movl   $0x8049b80,(%esp)6>                                                                           │
+   │0x804906b <test+75>     call   0x80487e0 <printf@plt>                                                                        │
+   │0x8049070 <test+80>     leave                   lt>                                                                          │
+   │0x8049071 <test+81>     ret                                                                                                  │
+   │0x8049072 <test+82>     mov    %edx,0x4(%esp)                                                                                │
+   │0x8049076 <test+86>     movl   $0x8049b63,(%esp)                                                                             │
+   │0x804907d <test+93>     call   0x80487e0 <printf@plt>                                                                        │
+   │0x8049082 <test+98>     movl   $0x3,(%esp)                                                                                   │
+   │0x8049089 <test+105>    call   0x8048b20 <validate>                                                                          │
+  >│0x804908e <test+110>    leave                   @plt>                                                                        │
+   │0x804908f <test+111>    ret                                                                                                  │
+   │0x8049090 <launch>      push   %ebp                                                                                          │
+   │0x8049091 <launch+1>    mov    %esp,%ebpebpp)                                                                                │
+   │0x8049093 <launch+3>    sub    $0x58,%espsp,%ebp                                                                             │
+  >│0x8049096 <launch+6>    mov    %edi,-0x4(%ebp)  @plt>                                                                        │
+   │0x8049099 <launch+9>    mov    %eax,%edi                                                                                     │
+   │0x804909b <launch+11>   mov    0x804a1c8,%eaxidate>                                                                          │
+   │0x80490a0 <launch+16>   mov    %ebx,-0xc(%ebp)                                                                               │
+   │0x80490a3 <launch+19>   lea    -0x4c(%ebp),%ebx                                                                              │
+   └──80490a6 <launch+22>   mov    %esi,-0x8(%ebp)  <__i686.get_pc_thunk.bx>─────────────────────────────────────────────────────┘
+child 80490a9 <launch+25>   mov    %edx,%esi                                                             Line: ??   PC: 0x804907d 
+      80490ab <launch+27>   test   %eax,%eax                                                              Line: ??   PC: 0x49e920
+Breakpoint 2, 0x08049006 in getbuf ()
+(gdb) ni                test                                                                             Line: ??   PC: 0x804908e
+0x0804900c in getbuf ()
+0x08049011 in getbuf ()
+0x08049016 in getbuf ()
+0x08049017 in getbuf ()
+No function contains program counter for selected frame.
+No function contains program counter for selected frame.
+No function contains program counter for selected frame.
+0x0804903e in test ()
+0x08049040 in test ()
+0x08049043 in test ()
+0x08049048 in test ()
+0x08049058 in test ()
+0x0804905e in test ()
+0x08049072 in test ()
+0x08049076 in test ()
+0x0804907d in test ()
+Type string:Boom!: getbuf returned 0x383a5a5f
+0x08049082 in test ()
+0x08049089 in test ()
+Detaching after	fork from child	process	24852.
+NICE JOB!
+         Sent validation information to grading server
+0x0804908e in test ()
+(gdb) 

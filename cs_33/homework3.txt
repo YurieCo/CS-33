@@ -1,0 +1,39 @@
+3.64
+A)
+$ebx becomes s1.a
+$edx becomes s1.p
+$eax becomes the base pointer for the return struct
+
+B)
+after line 4:
+%esp is a pointer to s2
+4(%esp) holds x, which is s1.a
+8(%esp) hold &y, which is s1.p
+-8(%ebp) start of s2, s2.a
+-4(%ebp) end of s2, s2.p
+
+C)
+structs are passed through the stack at, ebp or ebp+4 if there is a struct as a return value.
+
+D)
+structs are passed back as return values through the stack by having ebp+8 be the pointer to the struct passed by the calling method.
+
+
+3.70
+A)
+long traverse(tree_ptr tp)
+{
+  long val = -9223372036854775808;//long max???
+  long a = 0;
+  long b = tp->val;
+  if(tp != 0)
+  {
+    a = travers(tp->left);
+    val = traverse(tp->right);
+    val = val >= a ? a : val;
+    val = b < val ? b : val;
+  }
+  return val;
+}
+
+B) finds the least value in the entire tree.

@@ -1,0 +1,63 @@
+
+3.59
+
+A)
+content of registers:
+%ebx = n
+%edx = mask
+%esi = x
+%edi = result
+
+B)
+result = -1;
+mask = 1;
+
+C)
+mask != 0;
+
+D)
+mask = mask << n;
+
+E)
+result = (mask & x) ^ result;
+
+F)
+int loop(int x, int n)
+{
+  int result = -1;
+  int mask;
+  for(mask = 1; mask != 0; mask = mask << n)
+    result = (mask & x) ^ result;
+  return result;
+}
+
+
+3.59
+
+
+int switch_prob(int x, int n)
+{
+  int result = x;
+
+  switch(n)
+  {
+    case 50:
+    case 52:
+      result = result << 2;
+      break;
+
+    case 53:
+      result = result >> 2;
+      break;
+
+    case 54:
+      result = result + result*2;
+    case 55:
+      result = result*result;
+    case 51:
+    default:
+      result = 10+result;
+  }
+
+  return result;
+}
